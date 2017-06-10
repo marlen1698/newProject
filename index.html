@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>格式打印编辑器</title>
+
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/data.css"/>
+    <link rel="stylesheet" type="text/css" href="fonts/style.css"/>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/view.js"></script>
+</head>
+
+<body style="height:100%;overflow-x: hidden; overflow-y: hidden;" scroll="no">
+<!--header menu-main star -->
+<div class="menu-main">
+    <div class="main-detail clearfix">
+        <div class="header-left fl">格式打印编辑器</div>
+        <div class="header-center fl clearfix">
+            <div style="width: 100px;" class="clearfix mt10 fl">
+                <div class="ui-btn ui-header fl"><i class="ui-icon-back"></i></div>
+                <div class="ui-btn ui-header fl ml10"><i class="ui-icon-forward-blue"></i></div>
+            </div>
+            <div class="clearfix header-center-text">
+                <!--矩形 start-->
+                <div class="">
+                    <p class="fl jx">矩形</p>
+                    <div class="clearfix fl" id="jx">
+                        <div class="ui-select">
+                            <div class="ui-select-right">
+                                <img src="images/drop-down.png" style="position: absolute;bottom: 3px; right: 3px">
+                            </div>
+                            <ul class="drop-menu00">
+                                <li class="ui-btn ui-drop-menu"><i class="ui-icon-thickness"></i></li>
+                            </ul>
+                            <ul class="drop-menu01 hide" >
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-bold-one"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-bold-two"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-bold-three"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-bold-four"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-bold-five"></i></li>
+                            </ul>
+                        </div>
+                        <div class="ui-select ml10">
+                            <div class="ui-select-right">
+                                <img src="images/drop-down.png" style="position: absolute;bottom: 3px; right: 3px">
+                            </div>
+                            <ul class="drop-menu00">
+                                <li class="ui-btn ui-drop-menu"><i class="ui-icon-dotted-line"></i></li>
+                            </ul>
+                            <ul class="drop-menu01 hide">
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-dotted-a"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-dotted-b"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-dotted-c"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-dotted-d"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-dotted-e"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-dotted-f"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-dotted-g"></i></li>
+                            </ul>
+                        </div>
+                        <div class="ui-select ml10">
+                            <div class="ui-select-right">
+                                <i class="ui-icon-drop-down" style="position: absolute;bottom: 3px; right: 3px"></i>
+                                <img src="images/drop-down.png" style="position: absolute;bottom: 3px; right: 3px">
+                            </div>
+                            <ul class="drop-menu00">
+                                <li class="ui-btn ui-drop-menu"><i class="ui-icon-dotted-line"></i></li>
+                            </ul>
+                            <ul class="drop-menu01 hide">
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-dotted-a"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-dotted-b"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-dotted-c"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-dotted-d"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-dotted-e"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-dotted-f"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-dotted-g"></i></li>
+                            </ul>
+                        </div>
+                        <div class="ui-select ml10">
+                            <div class="ui-select-right">
+                                <img src="images/drop-down.png" style="position: absolute;bottom: 3px; right: 3px">
+                            </div>
+                            <ul class="drop-menu00">
+                                <li class="ui-btn ui-drop-menu"><i class="ui-icon-dotted-line"></i></li>
+                            </ul>
+                            <ul class="drop-menu01 hide">
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-dotted-a"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-dotted-b"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-dotted-c"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-dotted-d"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-dotted-e"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-dotted-f"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-dotted-g"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--矩形 end-->
+                <!--数据表格 start-->
+                <div class="hide">
+                    <p class="fl jx">数据表格</p>
+                    <div class="clearfix fl">
+                        <div class="ui-select">
+                            <div class="ui-select-right">
+                                <img src="images/drop-down.png" style="position: absolute;bottom: 3px; right: 3px">
+                            </div>
+                            <ul class="drop-menu00">
+                                <li class="ui-btn ui-drop-menu"><i class="ui-icon-dotted-line"></i></li>
+                            </ul>
+                            <ul class="drop-menu01 hide">
+                                <li class="ui-btn ui-drop-menu"><i class="ui-icon-dotted-line"></i></li>
+                                <li class="ui-btn ui-drop-menu"><i class="ui-icon-thickness"></i></li>
+                            </ul>
+                        </div>
+                        <div class="ui-select ml10">
+                            <div class="ui-select-right">
+                                <i class="ui-icon-drop-down" style="position: absolute;bottom: 3px; right: 3px"></i>
+                                <img src="images/drop-down.png" style="position: absolute;bottom: 3px; right: 3px">
+                            </div>
+                            <ul class="drop-menu00">
+                                <li class="ui-btn ui-drop-menu"><i class="ui-icon-dotted-line"></i></li>
+                            </ul>
+                            <ul class="drop-menu01 hide">
+                                <li class="ui-btn ui-drop-menu"><i class="ui-icon-thickness"></i></li>
+                                <li class="ui-btn ui-drop-menu"><i class="ui-icon-dotted-line"></i></li>
+                            </ul>
+                        </div>
+                        <div class="ui-select ml10">
+                            <div class="ui-select-right">
+                                <img src="images/drop-down.png" style="position: absolute;bottom: 3px; right: 3px">
+                            </div>
+                            <ul class="drop-menu00">
+                                <li class="ui-btn ui-drop-menu"><i class="ui-icon-dotted-line"></i></li>
+                            </ul>
+                            <ul class="drop-menu01 hide">
+                                <li class="ui-btn ui-drop-menu"><i class="ui-icon-thickness"></i></li>
+                                <li class="ui-btn ui-drop-menu"><i class="ui-icon-dotted-line"></i></li>
+                            </ul>
+                        </div>
+                        <div class="ml10 w120 fl" >
+                            <ul class="ltrb">
+                                <li><div class="left"></div></li>
+                                <li><div class="top"></div></li>
+                                <li><div class="right"></div></li>
+                                <li><div class="bottom"></div></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--数据表格 end-->
+                <!--字段 start-->
+                <div class="hide">
+                    <p class="fl jx">字段</p>
+                    <div class="clearfix fl">
+                        <div class="ui-select" >
+                            <div class="ui-select-right">
+                                <img src="images/drop-down.png" style="position: absolute;bottom: 3px; right: 3px">
+                            </div>
+                            <ul class="drop-menu00">
+                                <li class="ui-btn ui-drop-menu"><i class="ui-icon-thickness"></i></li>
+                            </ul>
+                            <ul class="drop-menu01">
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-bold-one"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-bold-two"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-bold-three"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-bold-four"></i></li>
+                                <li class="ui-btn ui-drop-menu01"><i class="ui-bold-five"></i></li>
+                            </ul>
+                        </div>
+                        <div class="ui-select ml10 w100">
+                            <div class="ui-select-right">
+                                <i class="ui-icon-drop-down" style="position: absolute;bottom: 3px; right: 3px"></i>
+                                <img src="images/drop-down.png" style="position: absolute;bottom: 3px; right: 3px">
+                            </div>
+                            <ul class="bar-code">
+                                <li>微软雅黑雅黑</li>
+                            </ul>
+                        </div>
+                        <div class="ui-select ml10 ">
+                            <div class="ui-select-right">
+                                <img src="images/drop-down.png" style="position: absolute;bottom: 3px; right: 3px">
+                            </div>
+                            <ul class="bar-code">
+                                <li>24</li>
+                            </ul>
+                        </div>
+                        <div class="ui-font ml10 fl">
+                            <ul class="ddd">
+                                <li class="ui-btn ui-icon-h"> <i class="icon-bold"></i></li>
+                                <li class="ui-btn ui-icon-h"> <i class="icon-italic"></i></li>
+                                <li class="ui-btn ui-icon-h"> <i class="icon-underline"></i></li>
+                                <li class="ui-btn ui-icon-h"> <i class="icon-align-left"></i></li>
+                                <li class="ui-btn ui-icon-h"> <i class="icon-align-center"></i></li>
+                                <li class="ui-btn ui-icon-h"> <i class="icon-align-right"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--字段 end-->
+                <!--条形码 start-->
+                <div class="hide">
+                    <p class="fl jx">条码</p>
+                    <div class="clearfix fl">
+                        <div class="picture fl ui-btn" style="width: 33px; height: 23px"><i class="ui-icon-h-link"></i></div>
+                        <div class="ui-select w120" >
+                            <div class="ui-select-right">
+                                <img src="images/drop-down.png" style="position: absolute;bottom: 3px; right: 3px">
+                            </div>
+                            <ul class="bar-code">
+                                <li>运单号</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--条形码 end-->
+                <!--图片 start-->
+                <div class="hide">
+                    <p class="fl jx">图片</p>
+                    <div class="clearfix fl">
+                        <div class="picture fl ui-btn" style="width:33px; height: 23px"><i class="ui-icon-bg-pic"></i></div>
+                        <div class="ui-select w120" >
+                            <ul class="bar-code">
+                                <li>logo.png</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--图片 end-->
+            </div>
+            <div class="clearfix header-center-input">
+                <div class="fl">
+                    <p class="fl">X</p><input type="text" class="font-text line-input">
+                </div>
+                <div class="fl">
+                    <p class="fl">Y</p><input type="text" class="font-text line-input">
+                </div>
+                <div class="fl">
+                    <p class="fl">宽</p><input type="text" id="input-w" class="font-text line-input">
+                </div>
+                <div class="fl">
+                    <p class="fl">高</p><input type="text" id="input-h" class="font-text line-input">
+                </div>
+            </div>
+        </div>
+        <div class="header-right fr ui-btn ui-header-right">
+            <i class="ui-icon-user"></i>
+            <span>江小白</span>
+            <i class="ui-icon-user-down"></i>
+        </div>
+    </div>
+</div>
+<!--header menu-main end -->
+
+<!-- content main_content star-->
+<!-- left menu star -->
+<div class="menu-left" id="main_content_left">
+    <div class="left-tab">
+        <ul>
+            <li class="active">字段列表</li>
+            <li>布局元素</li>
+        </ul>
+    </div>
+    <div class="tab-div block">
+        <div class="list">
+            <ul class="yiji">
+                <li><a href="#" class="inactive">出货信息</a>
+                    <ul style="display: none">
+                        <li><a href="#" class="active">订单编码</a></li>
+                        <li><a href="#" class="inactive active ui-btn" style="background-position: 55px center ">出库时间<i class="ui-icon-left-from movable"></i></a>
+                            <ul>
+                                <li><a href="#">序号</a></li>
+                                <li><a href="#">货品号</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="active">顾客姓名</a></li>
+                        <li><a href="#" class="active">顾客电话</a></li>
+                        <li><a href="#" class="inactive active ui-btn" style="background-position: 55px center ">核对人<i class="ui-icon-left-from movable"></i></a>
+                            <ul>
+                                <li><a href="#">货品信息(列表)</a></li>
+                                <li><a href="#">货品</a></li>
+                                <li><a href="#">备注</a></li>
+                                <li><a href="#">单价</a></li>
+                                <li><a href="#">数量</a></li>
+                            </ul>
+                        </li>
+                        <li class="last"><a href="#">总金额</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="tab-div hide">
+        <div class="fl data-icon ui-menu-left ui-btn"><i class="ui-icon-text-box"></i><span class="data_txt">文本框</span>
+        </div>
+        <div class="fl data-icon ui-menu-left ui-btn"><i class="ui-icon-rectangle"></i><span class="data_txt">矩形</span>
+        </div>
+        <div class="fl data-icon ui-menu-left ui-btn"><i class="ui-icon-ellipse"></i><span class="data_txt">椭圆</span>
+        </div>
+        <div class="fl data-icon ui-menu-left ui-btn"><i class="ui-icon-straight-line"></i><span class="data_txt">直线</span></div>
+        <div class="fl data-icon ui-menu-left ui-btn"><i class="ui-icon-bar-code"></i><span class="data_txt">条码</span>
+        </div>
+        <div class="fl data-icon ui-menu-left ui-btn"><i class="ui-icon-picture"></i><span class="data_txt">图片</span>
+        </div>
+        <div class="fl data-icon ui-menu-left ui-btn"><i class="ui-icon-from"></i><span class="data_txt">布局表格</span>
+        </div>
+    </div>
+</div>
+
+<div class="left-box hidden-xs">
+    <a class="pngfix" href="javascript:void(0);" onClick="navleft(this)"></a>
+</div>
+<!-- left menu end-->
+<!-- content page  star-->
+<div class="content" id="content" style="overflow: scroll">
+    <div class="hRule" style="width: 1920px;"></div>
+    <div class="vRule" style="height:1200px;"></div>
+
+    <div class="content-center">
+        <div class="con-cen-body">
+            <h2 class="align-center"><span>****</span>公司出货单</h2>
+            <div class="con-cen-header clearfix">
+                <div class="fl" style="min-width: 100px">
+                    <p>订单编号：<span>SDRTGDG001</span></p>
+                    <p>出库时间：<span>2017-02-15</span></p>
+                </div>
+                <div class="fr" style="min-width: 100px">
+                    <p>顾客姓名：<span>张三</span></p>
+                    <p>顾客电话：<span>13908650987</span></p>
+                </div>
+            </div>
+            <div class="con-cen-table">
+                <table width="100%">
+                    <thead>
+                    <tr>
+                        <th class="align-center">列表序号</th>
+                        <th class="align-center">货品</th>
+                        <th class="align-center">备注</th>
+                        <th class="align-center">单价</th>
+                        <th class="align-center">数量</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><input class="text-input" type="text"></td>
+                        <td><input class="text-input" type="text"></td>
+                        <td><input class="text-input" type="text"></td>
+                        <td><input class="text-input" type="text"></td>
+                        <td><input class="text-input" type="text"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div style="margin: 30px 0 0 30px">
+                    <p style="color: white; line-height: 27px;">本区域将动态打印数据类表</p>
+                    <div class="ui-btn ui-icon-del">
+                        <i class="ui-icon-delete"></i>
+                        <button class="btn btn-delete" onClick="article_del(this)"><div class="ml15">移除</div></button>
+                    </div>
+                </div>
+            </div>
+            <div class="con-cen-footer clearfix">
+                <div class="fl ml10" style="min-width: 100px">
+                    <p>核对人：[<span>李四</span>]</p>
+                </div>
+                <div class="fr" style="min-width: 100px">
+                    <p>总计：[<span>总金额</span>]</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div class="content-footer clearfix">-->
+    <!--<div class="amplifier"></div>-->
+    <!--<ul class="help-center">-->
+        <!--<li>帮助中心</li>-->
+        <!--<li>技术支持</li>-->
+    <!--</ul>-->
+<!--</div>-->
+<!-- content page  star-->
+
+<!--  right-menu  star-->
+<div class="menu-right" id="main_content_right">
+    <div class="right-top clearfix">
+        <div class="ui-right-top ui-btn fl">
+            <i class="ui-icon-save"></i>
+            <p>打印</p>
+        </div>
+        <div class="ui-right-top ui-btn fl">
+            <i class="ui-icon-print"></i>
+            <p>暂存</p>
+        </div>
+    </div>
+    <div class="right-center">
+        <div class="right-center-list">
+            <h4 class="clearfix">
+                <span class="fl">模板设置</span>
+                <button class="fr mr5">储存为模板</button>
+            </h4>
+            <div class="mt15">
+                <div class="ui-menu-right ui-btn">
+                    <div class="mb"> <p>模板</p> <i class="ui-icon-single-type"></i></div>
+                    <input type="text" class="font-text ml35 w182"></div>
+            </div>
+            <div class="clearfix mt15">
+                <div class="ui-menu-right ui-btn fl w115">
+                    <div class="mb"><p>页面宽</p>
+                        <i class="ui-icon-wide"></i></div><input type="text" class="font-text ml35 w68">
+                </div>
+                <div class="ui-menu-right ui-btn fr w115">
+                    <div class="mb"><p>页面高</p>
+                        <i class="ui-icon-height" style="margin-left: 3px"></i></div><input type="text" class="font-text ml35 w68">
+                </div>
+            </div>
+            <div class="clearfix mt15">
+                <div class="ui-menu-right ui-btn fl w115">
+                    <div class="mb"><p>单位</p>
+                    <i class="ui-icon-company"></i>
+                    </div><input type="text" class="font-text ml35 w68">
+                </div>
+                <div class="fl a-active" style="position: relative">
+                    <i class="icon-transverse bg-white fl"></i>
+                    <i class="icon-vertical"></i>
+                </div>
+            </div>
+            <div class="clearfix mt15">
+                <div class="ui-menu-right ui-btn fl w170">
+                    <div class="mb"><p>背景图</p>
+                        <i class="ui-icon-bg-image"></i></div>
+                    <input type="text" class="font-text ml35 w120">
+                </div>
+                <div class="ui-menu-right-icon ui-btn fl" style="border: 1px solid #9da5aa">
+                        <i class="ui-icon-cut" ></i>
+                </div>
+            </div>
+            <div class="clearfix mt15">
+                <div class="ui-menu-right ui-btn w170">
+                    <div class="mb"><p>背景图透明度</p>
+                        <i class="ui-icon-transparency"></i>
+                    </div>
+                </div>
+                <div class="fl ">
+                    <div id="box">
+                        <div id="bg">
+                            <div id="bgcolor"></div>
+                        </div>
+                        <div id="bt">
+                            <div class="bt1"></div>
+                        </div>
+                    </div>
+                </div>
+                <span id="text" style="margin-left: 5px">0</span>
+            </div>
+        </div>
+    </div>
+    <div class="right-footer"></div>
+</div>
+<div class="right-box hidden-xs">
+    <a class="pngfix1" href="javascript:void(0);" onClick="navright(this)">
+    </a>
+</div>
+<!-- right-menu end-->
+<script type="text/javascript">
+    $(function() {
+        //menu-left tab切换
+        $(".left-tab ul li").on('click', function () {
+            $(this).addClass("active").siblings().removeClass();
+            $(".tab-div").addClass("hide").removeClass("block").eq($(".left-tab ul li").index(this)).addClass("block");
+        });
+    });
+    /*左侧菜单-隐藏显示*/
+    function navleft(left) {
+        if ($(left).hasClass("open")) {
+            $(left).removeClass("open");
+            $("body").removeClass("big-page");
+        } else {
+            $(left).addClass("open");
+            $("body").addClass("big-page");
+        }
+    }
+    /*右侧菜单-隐藏显示*/
+    function navright(right) {
+        if ($(right).hasClass("open")) {
+            $(right).removeClass("open");
+            $("body").removeClass("big-page1");
+        } else {
+            $(right).addClass("open");
+            $("body").addClass("big-page1");
+        }
+    }
+
+</script>
+<script type="text/javascript" src="js/on-active-hover.js"></script>
+<!-- content main_content end-->
+</body>
+</html>
